@@ -51,7 +51,7 @@
 
         2. We put the comments of <a href="news.ycombinator.com/leaders">top 100 HN commenters</a> through that service to see what happens.<br>
         <br>
-        3. You can sort users by any characteristic. <a href="#" onClick=" reList('Artistic interests'); return false;">Try it now</a>.<br>
+        3. You can sort users by any characteristic. <a href="#" onClick=" reList('Practicality'); return false;">Try it now</a>.<br>
         <br>
         Authors:<br>
         <div id="a1">
@@ -63,7 +63,9 @@
         - <a href="mailto:kolinko@gmail.com">Tomasz Kolinko</a>, <a href="http://twitter.com/kolinko">@kolinko</a><br>
         </div>
 
-        <a href="#" class="btn btn-outline-inverse btn-lg" onclick="reList('Artistic interests'); return false;">Sort by Artistic Interests</a>
+        <br>
+
+		<button class="btn btn-lg btn-success" onclick="reList('Practicality'); return false;">Sort by Practicality</button>
 
         <script>
         		if (Math.random()<0.5) {
@@ -132,7 +134,7 @@
 	sortBy = "Artistic interests";
 
 	function sortFunc (a,b) {
-		if (getStat(a, sortBy) < getStat(b, sortBy)) {
+		if (getStat(a, sortBy) > getStat(b, sortBy)) {
 
 			return -1
 
