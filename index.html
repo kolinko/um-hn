@@ -225,9 +225,9 @@
 		for (u in users) {
 
 			count++;
-			$('#li').append(count+". 	["+getStat(users[u],sortBy)+"] <a href='#' onClick='render("+u+"); return false;'><b>"+users[u].id+
-								"</b></a> <a href='http://news.ycombinator.com/threads?id="+users[u].id+"' target='suppl'>(threads)</a> "+
-								"<a href='http://news.ycombinator.com/user?id="+users[u].id+"' target='suppl'>(about)</a><br>");
+			$('#li').append(count+". 	["+getStat(users[u],sortBy)+"] <a href='#' onClick='mixpanel.track(\"render "+u+"\"); render("+u+"); return false;'><b>"+users[u].id+
+								"</b></a> <a href='http://news.ycombinator.com/threads?id="+users[u].id+"' onClick='mixpanel.track(\"thr "+u+"\");' target='suppl'>(threads)</a> "+
+								"<a href='http://news.ycombinator.com/user?id="+users[u].id+"' onClick='mixpanel.track(\"about "+u+"\");' target='suppl'>(about)</a><br>");
 
 		};
 
